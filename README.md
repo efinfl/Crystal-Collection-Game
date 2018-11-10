@@ -5,4 +5,4 @@ Match randomly generated "computer" value.
 ## How: 
 User my choose from several buttons. Each button is assigned a random value. User, then clicks each button to achieve sum of "computer value 
 ## Determination of win or loss: 
-User wins when she achieves sum without going over within the given number of chances.
+User wins when she achieves a sum equal to but not greater than the "computer" value. This must be acheived within the allowed attemps. 
