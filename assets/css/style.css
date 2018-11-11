@@ -11,12 +11,12 @@ div {
     border: 1px solid yellow;
 }
 
-h1, h2, h3, p {
+h1, h2, h3 {
     line-height: 100%;
     color: rgb(255, 230, 199);
 }
 
-h1, h2 {
+h1 {
     font-family: 'Fira Mono', monospace;
     font-weight: 700;
 }
@@ -26,6 +26,8 @@ h1 {
 }
 
 h2 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
     font-size: 21px;
 }
 
@@ -38,21 +40,17 @@ h3 {
 p {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 400;
+    line-height: 116%;
+    color: rgb(255, 230, 199)
 }
 
-
-#background {
+#mainContent{
     background-color: rgb(241, 87, 83 );
-    width: 100%;
+    padding: 20px;
     background-image: url(../images/backgroundImg.png);
     background-size: 450px;
     background-position-x: 20%;
     background-repeat: no-repeat;
-    overflow: auto;
-}
-
-#mainContent{
-    padding: 20px;
     overflow: auto;
 }
 
@@ -63,12 +61,18 @@ p {
     padding: 0 18px 0 0;
     border-right: solid 4.5px rgb(255, 230, 199);
     float: left;
-    clear: right;
 }
 
 #gameWrapper {
-    background-color: bisque;
-    height: 100px;
     max-width: 600px;
-    /* float: left; */
+    float: left;
+}
+
+.gameDivs {
+    float: left;
+}
+
+.btnImages {
+    margin-right: 9px;
+    float: left;
 }

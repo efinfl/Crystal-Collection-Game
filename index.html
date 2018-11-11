@@ -16,37 +16,48 @@
 
 <body>
     <!-- You can try Jumbotron-->
-    <div id=background>
-        <div id=mainContent>
-            <div id=textWrapper>
-                <h1>CRYSTAL<br>COLLECTOR</h1>
-                <H2>MATCH THE COMPUTER'S NUMBER</H2>
-                <h3>How to win or lose</h3>
-                <p>Each “crystal” button below is assigned a secret value. Each time you click on one, its value is
-                    added to your sum. Note by how much you sum increases to Keep track of each "crystal's value. If
-                    you match the computer’s number without going over, you win. If you exceed
-                    the computer’s number, you lose.
-                </p>
+
+    <div id="mainContent">
+        <div id="textWrapper"r>
+            <h1>CRYSTAL<br>COLLECTOR</h1>
+            <H2>MATCH THE COMPUTER'S NUMBER</H2>
+            <h3>How to win or lose</h3>
+            <p>Each “crystal” button below is assigned a secret value. Each time you click on one, its value is
+                added to your sum. Note by how much you sum increases to Keep track of each "crystal's value. If
+                you match the computer’s number without going over, you win. If you exceed
+                the computer’s number, you lose.
+            </p>
+        </div>
+        <div id="gameWrapper">
+            <div id="statsWrapp">
+                <div class="gameDivs" id="computerGuess">computerGuess</div>
+                <div class="gameDivs" id="userSum">userSum</div>
+                <div class="gameDivs" id="winLose">winLose</div>
 
             </div>
-            <div id=gameWrapper>
+            <div id=buttonsWrapp>
+                <img class="btnImages" id="crystal_1" src="assets/images/crystal_1Btn.png">
+                <img class="btnImages" id="crystal_2" src="assets/images/crystal_2Btn.png">
+                <img class="btnImages" id="crystal_3" src="assets/images/crystal_3Btn.png">
+                <img class="btnImages" id="crystal_4" src="assets/images/crystal_4Btn.png">
 
             </div>
-
-
-
-
         </div>
 
 
 
 
-
-
-
-
-
     </div>
+
+
+
+
+
+
+
+
+
+
 
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
