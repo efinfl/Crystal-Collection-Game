@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-})
 
 // Global Variables
 // Ids = variables
@@ -12,22 +11,32 @@ var crystal_2 = "";
 var crystal_3 = "";
 var crystal_4 = "";
 
-var computerNumberRange = [];
-var usernumberRange = [];
 
 // Data Types
 var winValue = 0;
 var lossesValue = 0;
 
-
-// Single Functions
-// 1. Computer chooses rand Num
+// Reset
 function reset() {
     winValue = "";
     lossesValue = ""
 }
+console.log ("is this working")
 
-// 2. Assign Rand Values to Crystals 
+// Single Functions
+// 1. Computer chooses rand Num
+function randomComputer() {
+    computerRando = Math.floor(Math.random() * 18) + 102;
+    console.log(computerRando);
+}
+
+
+
+// 2. Assign Rand Values to Crystals
+function crystalChoice() {
+    crystalValue = Math.floor(Math.random() * 12);
+    console.log("crystalValue: " + crystalValue);
+}
 
 
 // Multi use Functions
@@ -36,3 +45,5 @@ function reset() {
 // 5. If Match User Wins append to DOM You Win, reset
 // 6. If No Match User loses , add loss, reset
 // 7. reset function
+
+});
