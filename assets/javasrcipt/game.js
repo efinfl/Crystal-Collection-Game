@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     // Global Variables
     // Ids = variables
-    
+
     var useSum = 0;
 
     // var crystal_1;
@@ -29,21 +29,23 @@ $(document).ready(function () {
     // Computer chooses rand Num
     randomForComputer = Math.floor(Math.random() * 102) + 18;
     console.log("computerChoic: " + randomForComputer);
-   
+
     // computerChoice gets displayed
     $("#computerChoice").html(randomForComputer);
 
     // 2. crystals get a random number
     // crystalRandom = Math.floor(Math.random() * 12) + 1;
     // console.log("crystalRandom " + crystalRandom)
+
+   
+    var crystal_1Val = Math.floor(Math.random() * 12) + 1;
+    var crystal_2Val = Math.floor(Math.random() * 12) + 1;
+    var crystal_3Val = Math.floor(Math.random() * 12) + 1;
+    var crystal_4Val = Math.floor(Math.random() * 12) + 1;
     
-    crystal_1 = Math.floor(Math.random() * 12) + 1;
-    crystal_2 = Math.floor(Math.random() * 12) + 1;
-    crystal_3 = Math.floor(Math.random() * 12) + 1;
-    crystal_4 = Math.floor(Math.random() * 12) + 1;
-
-
-    // console.log("crystals rando values " + crystal_1, crystal_2, crystal_3, crystal_4);
+    $("crystal_1").click(console.log($("crystal_1Val").val(crystal_1Val)));
+    
+    
 
 
     // Multi use Functions
