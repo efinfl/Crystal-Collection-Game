@@ -18,7 +18,7 @@
     <!-- You can try Jumbotron-->
 
     <div id="mainContent">
-        <div id="textWrapper"r>
+        <div id="textWrapper" r>
             <h1>CRYSTAL<br>COLLECTOR</h1>
             <H2>MATCH THE COMPUTER'S NUMBER</H2>
             <h3>How to win or lose</h3>
@@ -28,13 +28,19 @@
                 the computer’s number, you lose.
             </p>
         </div>
+
+        <!-- Wraps computer choice, user sum and win loss tally -->
         <div id="gameWrapper">
             <div id="statsWrapp">
-                <div class="gameDivs" id="computerGuess">computerGuess</div>
-                <div class="gameDivs" id="userSum">userSum</div>
-                <div class="gameDivs" id="winLose">winLose</div>
-
+                <div class="statDivs" id="computer"><span class="choiceValues" id="computerChoice">45</span></div>
+                <div class="statDivs" id="user"><span class="choiceValues" id="useSum">45</span></div>
+                <div class="statDivs" id="score">
+                    <div class=winLoss>WINS <span id=winValue>00</span></div>
+                    <div class=winLoss>LOSSES <span id=lossesValue>00</span></div>
+                </div>
             </div>
+
+            <!-- Wraps crystal buttons -->
             <div id=buttonsWrapp>
                 <img class="btnImages" id="crystal_1" src="assets/images/crystal_1Btn.png">
                 <img class="btnImages" id="crystal_2" src="assets/images/crystal_2Btn.png">

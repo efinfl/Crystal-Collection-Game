@@ -6,10 +6,14 @@ Beige: 255, 230, 199
 Dark Grey 63, 78, 89
 Blue Grey: 147, 192, 216 */
 
-/* FPO box border */
-div {
-    border: 1px solid yellow;
+* {
+    box-sizing: border-box;
 }
+
+/* FPO box border */
+/* div {
+    border: .5px solid yellow;
+} */
 
 h1, h2, h3 {
     line-height: 100%;
@@ -66,13 +70,81 @@ p {
 #gameWrapper {
     max-width: 600px;
     float: left;
+    margin: 20px 0 0 10px;
+}
+/* wrapps computer choice, user choice, wins, losses */
+#statsWrapp{
+    margin: 0px 0 20px 0;
+    overflow: auto;
+    
+}
+/* Sets common propertied for divs holding the above mentioned */
+.statDivs {
+    float: left;
+    margin-right: 18px;
+    text-align: center;
+    padding-top: 10px;
+}
+/* to apply */
+#computer {
+   width: 125px; 
+   height: 120px;
+   background-image: url(../images/computerIcon.png);
+   background-repeat: no-repeat;
+   background-position-y: 5px;
+   
+}
+.choiceValues {
+    font-family: 'Fira Mono', monospace;
+    font-weight: 700;
+    font-size: 45px;
+    color: rgb(255, 230, 199);
 }
 
-.gameDivs {
-    float: left;
+#user {
+    width: 104px; 
+    height: 120px;
+    background-image: url(../images/headIcon.png);
+    background-repeat: no-repeat;
+}
+
+#score {
+    /* width: 125px; */
+    height: 120px;
+    padding-top: 30px;
+    margin-right: 0;
 }
 
 .btnImages {
-    margin-right: 9px;
+    margin-right: 18px;
     float: left;
 }
+
+.winLoss {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    color: rgb(255, 230, 199);
+    font-weight: 700;
+    text-align: right;
+}
+
+#winValue {
+    font-family: 'Fira Mono', monospace;
+    font-weight: 400;
+    width: px;
+    background-color: rgb(147, 192, 216);
+    padding: 0px 5px 0px 5px;
+    color: rgb(63, 78, 89);
+}
+
+#lossesValue {
+    font-family: 'Fira Mono', monospace;
+    font-weight: 400;
+    width: px;
+    background-color: rgb(147, 192, 216);
+    padding: 0px 5px 0px 5px;
+    color: rgb(63, 78, 89);
+}
+
+
+
