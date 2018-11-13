@@ -43,7 +43,15 @@ $(document).ready(function () {
     var crystal_3Val = Math.floor(Math.random() * 12) + 1;
     var crystal_4Val = Math.floor(Math.random() * 12) + 1;
     
-    $("crystal_1").click(console.log($("crystal_1Val").val(crystal_1Val)));
+    // Assigns value to buttons. See link for reference: https://www.w3schools.com/jquery/misc_data.asp
+    // $("#crystal_1").click(console.log($("crystal_1Val").val(crystal_1Val)));
+    // $("#btn1").click(function(){
+    // $("div").data("greeting", "Hello World");
+    
+    $("#crystal_1").click(function() {
+        $("#crystal_1").data(crystal_1Val);
+        console.log($("#crystal_1").data());
+    });
     
     
 
