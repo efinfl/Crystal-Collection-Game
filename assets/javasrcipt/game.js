@@ -15,31 +15,40 @@ $(document).ready(function () {
         // console.log(crystal_1)
 
         // // Data Types
-        // winValue = 0;
-        // lossesValue = 0;
+        winValue: 0,
+        lossesValue: 0
     };
-    
-    
+
+
 
     // Reset
     function reset() {
-        winValue = "";
-        lossesValue = "";
+        var game = {
+            userSum: 0,
+
+            // var crystal_1;
+            crystal_1: 0,
+            crystal_2: 0,
+            crystal_3: 0,
+            crystal_4: 0,
+
+        
+        };
+
     }
-    console.log("is this working")
+    console.log("is this working");
 
     // Single Functions
-    // Computer chooses rand Num
-    randomForComputer = Math.floor(Math.random() * 102) + 18;
-    console.log("computerChoic: " + randomForComputer);
 
-    // computerChoice gets displayed
-    $("#computerChoice").html(randomForComputer);
 
     // 2. crystals get a random number
     // crystalRandom = Math.floor(Math.random() * 12) + 1;
     // console.log("crystalRandom " + crystalRandom)
 
+    // Assigns value to buttons. See link for reference: https://www.w3schools.com/jquery/misc_data.asp
+    // $("#crystal_1").click(console.log($("crystal_1Val").val(crystal_1Val)));
+    // $("#btn1").click(function(){
+    // $("div").data("greeting", "Hello World");
 
     game.crystal_1 = Math.floor(Math.random() * 12) + 1;
     game.crystal_2 = Math.floor(Math.random() * 12) + 1;
@@ -51,21 +60,24 @@ $(document).ready(function () {
     console.log("This is Crystal 3 Value " + game.crystal_3);
     console.log("This is Crystal 4 Value " + game.crystal_4);
 
-    // Assigns value to buttons. See link for reference: https://www.w3schools.com/jquery/misc_data.asp
-    // $("#crystal_1").click(console.log($("crystal_1Val").val(crystal_1Val)));
-    // $("#btn1").click(function(){
-    // $("div").data("greeting", "Hello World");
+    // Computer chooses rand Num
+    randomForComputer = Math.floor(Math.random() * 102) + 18;
+    console.log("computerChoic: " + randomForComputer);
 
-    function updateUserSum(x){
+    // computerChoice gets displayed
+    $("#computerChoice").html(randomForComputer);
+    
+    function updateUserSum(x) {
         $("#userSum").html(x);
     }
-    
+
     $("#crystal_1").click(function () {
         console.log("crystal _2: " + game.crystal_2)
         game.userSum += game.crystal_1;
         updateUserSum(game.userSum);
         console.log(game.userSum);
-        
+        checkForWin();
+
     });
     $("#crystal_2").click(function () {
         console.log("crystal _2: " + game.crystal_2);
@@ -74,6 +86,7 @@ $(document).ready(function () {
         console.log(game.userSum);
         //Update the page
         updateUserSum(game.userSum);
+        checkForWin();
     })
 
     $("#crystal_3").click(function () {
@@ -81,6 +94,7 @@ $(document).ready(function () {
         game.userSum += game.crystal_3;
         console.log(game.userSum);
         updateUserSum(game.userSum);
+        checkForWin();
     })
 
     $("#crystal_4").click(function () {
@@ -88,9 +102,32 @@ $(document).ready(function () {
         game.userSum += game.crystal_4;
         console.log(game.userSum);
         updateUserSum(game.userSum);
+        checkForWin();
     })
 
-   
+    //check if else
+    function checkForWin() {
+        if (game.userSum == randomForComputer) {
+            game.winValue++;
+            reset();
+            console.log(game.userSum + ";" + randomForComputer)
+            console.log(game.winValue);
+            $("#winValue").html(game.winValue);
+    
+
+        }
+        else if (game.userSum > randomForComputer) {
+            game.lossesValue++;
+            console.log(game.lossesValue)
+            $("#lossesValue").html(game.lossesValue);
+        }
+    };
+
+    
+
+
+
+
 
 
     // Multi use Functions
