@@ -135,7 +135,7 @@ $(document).ready(function () {
             game.winValue++;
 
             // Displays alert of a win,
-            alert("Wow! You can add. YOU WIN")
+            alert("Great Job! See if you can do it agian")
 
             // and updates display of wins
             $("#winValue").html(game.winValue);
@@ -155,7 +155,7 @@ $(document).ready(function () {
             console.log("Losses: " + game.lossesValue)
 
             // displays alert that you loose
-            alert("Sorry. You're dumber than you thought. YOU LOOSE")
+            alert("Oops. You went over. Give it another try.")
 
             // and updates display of lossees
             $("#lossesValue").html(game.lossesValue);
