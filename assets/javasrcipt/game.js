@@ -17,31 +17,9 @@ $(document).ready(function () {
         lossesValue: 0
     };
 
-
-
-    // Reset function
-    // function reset() {
-    //     var game = {
-    //         userSum: 0,
-
-    //         crystal_1: 0,
-    //         crystal_2: 0,
-    //         crystal_3: 0,
-    //         crystal_4: 0,
-
-
-    //     };
-
-    // }
-
-    function reset() {
-        game.userSum = 0;
-        game.crystal_1 = 0;
-        game.crystal_2 = 0;
-        game.crystal_3 = 0;
-        game.crystal_4 = 0;
-        updateUserSum(game.userSum);
-    }
+     // Random number for computer
+     randomForComputer = Math.floor(Math.random() * 102) + 18;
+     console.log("computerChoic: " + randomForComputer);
 
     // Single Functions
 
@@ -56,12 +34,30 @@ $(document).ready(function () {
     console.log("This is Crystal 3 Value " + game.crystal_3);
     console.log("This is Crystal 4 Value " + game.crystal_4);
 
-    // Random number for computer
-    randomForComputer = Math.floor(Math.random() * 102) + 18;
-    console.log("computerChoic: " + randomForComputer);
 
     // computerChoice gets displayed
     $("#computerChoice").html(randomForComputer);
+
+
+    
+    function reset() {
+        //set the user overall back to zero
+        game.userSum = 0;
+        //give each crystal a new random number
+        game.crystal_1 = Math.floor(Math.random() * 12) + 1;
+        game.crystal_2 = Math.floor(Math.random() * 12) + 1;
+        game.crystal_3 = Math.floor(Math.random() * 12) + 1;
+        game.crystal_4 = Math.floor(Math.random() * 12) + 1;
+        updateCompNumber()
+        updateUserSum(game.userSum);
+    }
+
+    function updateCompNumber() {
+    // Random number for computer
+     randomForComputer = Math.floor(Math.random() * 102) + 18;
+     console.log("computerChoice in reset: " + randomForComputer);
+     $("#computerChoice").html(randomForComputer); 
+    }
 
     // Function to update userSum to be called for each crystal button click
     function updateUserSum(x) {
@@ -165,7 +161,7 @@ $(document).ready(function () {
             $("#lossesValue").html(game.lossesValue);
 
             reset();
-            console.log(randomForComputer  + ";" + game.userSum )
+            console.log(randomForComputer + ";" + game.userSum)
         }
     };
 
