@@ -21,7 +21,6 @@ $(document).ready(function () {
      randomForComputer = Math.floor(Math.random() * 102) + 18;
      console.log("computerChoic: " + randomForComputer);
 
-    // Single Functions
 
     // Random numbers for each crystal button
     game.crystal_1 = Math.floor(Math.random() * 12) + 1;
@@ -51,7 +50,7 @@ $(document).ready(function () {
         updateCompNumber()
         updateUserSum(game.userSum);
     }
-
+    // Runs Random computer number again to reset it.
     function updateCompNumber() {
     // Random number for computer
      randomForComputer = Math.floor(Math.random() * 102) + 18;
