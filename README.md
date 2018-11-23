@@ -8,4 +8,4 @@ User my click on any of four "crystal" buttons. Each button has been assigned a 
 User wins when she achieves a sum equal to but not greater than the "computer" value. If this is not achieved, user gains a loss.
 
 ## Demo
-https://github.com/efinfl/unit-4-game/blob/master/Nov%2014%2C%202018%204_13%20PM.gif
+<img src="https://github.com/efinfl/unit-4-game/blob/master/Nov%2014%2C%202018%204_13%20PM.gif">
