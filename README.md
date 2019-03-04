@@ -2,6 +2,7 @@
 https://efinfl.github.io/Crystal-Collection-Game/
 
 ## Number matching Game: 
+Created using HTML, CSS, and JQuery
 ## Objective: 
 Match randomly generated "computer" value. 
 ## How: 
